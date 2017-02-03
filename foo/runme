@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+
+import os
+
+# Importing barfile only works when os.environ['PYTHONPATH'] includes 'bar'
+try:
+	import barfile
+	message = barfile.__file__
+except ImportError:
+	message = 'ImportError'
+print(message)
